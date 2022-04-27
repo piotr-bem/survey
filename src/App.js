@@ -350,13 +350,270 @@ const surveyJson = {
      "type": "radiogroup",
      "name": "question12",
      "title": "Does the operation take place above Flight Level 600?",
+     "isRequired": true,
      "choices": [
-      "item1",
-      "item2",
-      "item3"
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes (ARC B, AEC 11)"
+      }
+     ]
+    }
+   ],
+   "title": "Step #4",
+   "description": "Determination of initial Air Risk Class (ARC)"
+  },
+  {
+   "name": "page18",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question22",
+     "title": "Do you want to lower the ARC",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes "
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question12}=\"item2\"",
+   "title": "Step #5",
+   "description": "Mitigation Of Strategic Mitigations (Optional)"
+  },
+  {
+   "name": "page19",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question23",
+     "title": "Does the operation take place in Atypical airspace or Segregated airspace?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes "
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question12}=\"item2\"",
+   "title": "Step #5",
+   "description": "Mitigation Of Strategic Mitigations (Optional)"
+  },
+  {
+   "name": "page9",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question13",
+     "title": "Does the operation take place in an airport (or heliport) environment?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes "
+      }
+     ]
+    }
+   ],
+   "title": "Step #4",
+   "description": "Determination of initial Air Risk Class (ARC)"
+  },
+  {
+   "name": "page20",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question24",
+     "title": "Does the operation take place in class B, C or D airspace?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No (ARC C, AEC 6)"
+      },
+      {
+       "value": "item2",
+       "text": "Yes  (ARC D, AEC 1)"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question13}='item2'",
+   "title": "Step #4",
+   "description": "Determination of initial Air Risk Class (ARC)"
+  },
+  {
+   "name": "page21",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question25",
+     "title": "Do you want to lower the ARC",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{question13}='item2' and {question24}='item1'",
+   "title": "Step #5",
+   "description": "Determination of initial Air Risk Class (ARC)"
+  },
+  {
+   "name": "page11",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question15",
+     "title": "Does the operation take place  above 500 feet but below Flight Level 600?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes "
+      }
      ]
     }
    ]
+  },
+  {
+   "name": "page12",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question16",
+     "title": "Does the operation take place  in a Mode-C Veil airspace or Transponder Mandatory Zone?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes  (ARC C, AEC 7)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "page13",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question17",
+     "title": "Does the operation take place  in controlled airspace?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes  (ARC C, AEC 8)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "page14",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question18",
+     "title": "Does the operation take place  in uncontrolled airspace above a populated area?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No (ARC B, AEC 10)"
+      },
+      {
+       "value": "item2",
+       "text": "Yes  (ARC C, AEC 9)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "page15",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question19",
+     "title": "Do you want to lower the ARC?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes "
+      }
+     ]
+    }
+   ],
+   "title": "Step #5",
+   "description": "Application Of Strategic Mitigations (Optional)"
+  },
+  {
+   "name": "page16",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "question20",
+     "title": "Does the operation take place in Atypical airspace or Segregated airspace?",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "item1",
+       "text": "No"
+      },
+      {
+       "value": "item2",
+       "text": "Yes  (AEC 10, ARC A)"
+      }
+     ]
+    }
+   ],
+   "title": "Step #5",
+   "description": "Application Of Strategic Mitigations (Optional)"
   },
   {
    "name": "page10",
@@ -364,6 +621,17 @@ const surveyJson = {
     {
      "type": "text",
      "name": "question14",
+     "title": "czy to jest krok 6?"
+    }
+   ],
+   "title": "Step #6"
+  },
+  {
+   "name": "page17",
+   "elements": [
+    {
+     "type": "text",
+     "name": "question21",
      "title": "czy to jest krok 7?"
     }
    ],
